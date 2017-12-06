@@ -18,7 +18,7 @@
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "start": "http-server ./app -a localhost -p 8000 -c-1",
+    "start": "node node_modules/.bin/webpack-dev-server --config ./configuration/webpack/webpack.common.js --content-base app",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",
@@ -27,5 +27,25 @@
     "preprotractor": "npm run update-webdriver",
     "protractor": "protractor e2e-tests/protractor.conf.js",
     "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+  },
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-ui-router": "^0.4.3",
+    "aws-sdk": "^2.164.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "brfs": "^1.4.3",
+    "eslint": "^4.12.1",
+    "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "jquery": "^3.2.1",
+    "json-loader": "^0.5.7",
+    "raw-loader": "^0.5.1",
+    "transform-loader": "^0.2.4",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.5"
   }
 }
