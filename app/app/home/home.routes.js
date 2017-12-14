@@ -18,7 +18,6 @@
             .state('root.home', {
                 url: '/home',
                 template: require('./home.html'),
-                controller: 'HomeCtrl as homeCtrl',
                 resolve: {}
             })
     };

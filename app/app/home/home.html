@@ -1,3 +1,5 @@
-<div layout="row" layout-padding>
-    <p> Hi </p>
+<div layout="row" layout-padding ng-controller="HomeCtrl">
+	<div id="bg" ng-animate-swap="currentPicture" class="swap-animation">
+		<img ng-src="{{currentPicture}}" alt="">
+	</div>
 </div>

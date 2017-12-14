@@ -1,4 +1,6 @@
 import 'jquery';
 import 'angular';
+import 'angular-animate';
+import 'angular-aria';
+import 'angular-material';
 import 'angular-ui-router';
-// import 'aws-sdk/dist/aws-sdk.min.js';

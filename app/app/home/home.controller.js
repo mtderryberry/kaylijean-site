@@ -7,23 +7,45 @@
         .controller('HomeCtrl', HomeCtrl);
 
       //inject the services that need to be used by Home Controller
-        HomeCtrl.$inject = [];
+        HomeCtrl.$inject = ['$scope', 's3Svc', '$interval'];
         
 
-    	function HomeCtrl() {
+    	function HomeCtrl($scope, s3Svc, $interval) {
     		let self = this;
-    		// Import the Amazon S3 service client
-    		require('aws-sdk/dist/aws-sdk');
-			var AWS = window.AWS;
-			console.log(AWS);
-			 
-			// Set credentials and region
-			const s3 = new AWS.S3({
-			    apiVersion: '2006-03-01',
-			    region: 'us-west-1', 
-			    credentials: {}
-			  });
+    		$scope.s3Pictures = [];
+            $scope.currentPicture = "";
+    		const bucketName = "kaylijean-homepage-photos";
 
-			console.log(s3);
+    		const params = {
+                Bucket: bucketName
+            }
+
+            const s3 = s3Svc.getS3(bucketName);
+            const bucketUrl = "https://s3.us-west-2.amazonaws.com/" + bucketName + "/";
+
+            let currentImageIndex = 0;
+
+			s3.listObjectsV2(params, function(err, data) {
+				if (err) {
+					console.log(err, err.stack); // an error occurred
+				}
+				else {
+					for (let i = 0; i < data.Contents.length; i++) {
+						$scope.s3Pictures.push(bucketUrl + data.Contents[i].Key);
+					}
+                    $scope.currentPicture = $scope.s3Pictures[0];
+                    $interval(changePicture, 4000);
+					$scope.$apply();
+				}
+			});
+
+            function changePicture() {
+                currentImageIndex++;
+                if (currentImageIndex >= $scope.s3Pictures.length) {
+                    currentImageIndex = 0;
+                }
+                $scope.currentPicture = $scope.s3Pictures[currentImageIndex];
+            }
+
 		}
 })();
