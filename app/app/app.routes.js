@@ -22,7 +22,7 @@
                         template: require('./components/navbar/navbar.html'),
                     },
                     'content@root': {       //the main content for the portal
-                        template: '<div ui-view></div>'
+                        template: '<div ui-view class="page-content"></div>'
                     } 
                 }
             });

@@ -13,19 +13,28 @@
 
         let AWS;
         let s3;
+        let ses;
 
         return {
-            getS3: getS3
+            getS3: getS3,
+            getSES: getSES
         }
 
-        function getS3(s3Bucket) {
+        function getS3() {
             if (angular.isUndefined(s3)) {
-                init(s3Bucket);
+                init();
             }
             return s3;
         }
 
-        function init(s3Bucket) {
+        function getSES() {
+            if (angular.isUndefined(ses)) {
+                init();
+            }
+            return ses;
+        }
+
+        function init() {
             if (angular.isUndefined(AWS) && angular.isUndefined(s3)) {
                 // Import the Amazon S3 service client
                 require('aws-sdk/dist/aws-sdk');
@@ -37,9 +46,12 @@
                  
                 // Set credentials and region
                 s3 = new AWS.S3({
-                    apiVersion: '2006-03-01',
-                    Bucket: s3Bucket
-                  });
+                    apiVersion: '2006-03-01'
+                });
+
+                ses = new AWS.SES({
+                    apiVersion: '2010-12-01'
+                });
             }
         }
     }

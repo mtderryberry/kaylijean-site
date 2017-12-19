@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+#mainContent {
+  height: 100%; }
+
+.content-view {
+  height: calc(100% - 64px); }
+
+.page-content {
+  height: 100%; }
+#bg {
+  padding: 0px;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%; }
+
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%; }
+
+.swap-animation.ng-enter, .swap-animation.ng-leave {
+  transition: 0.5s linear all; }
+
+.swap-animation.ng-enter {
+  top: 0px;
+  opacity: 0; }
+
+.swap-animation.ng-enter-active {
+  top: 0px;
+  opacity: 1; }
+
+.swap-animation.ng-leave {
+  top: 0px;
+  opacity: 1; }
+
+.swap-animation.ng-leave-active {
+  top: 0px;
+  opacity: 0; }
+.about-all {
+  color: white;
+  height: 100%;
+  background-image: url("/assets/sony_camera.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.about-content {
+  margin-left: 2%;
+  width: 48%; }
+.contact-page {
+  height: 100%; }
+
+.contact-content {
+  height: 100%;
+  background-image: url("/assets/ocean.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.contact-title {
+  width: 100%;
+  text-align: center; }
+
+.contact-body {
+  text-align: center; }
+
+.contact-message-textarea {
+  width: 100%; }
+
+.contact-submit {
+  display: block;
+  margin: 0 auto; }
+
+.contact-form {
+  width: 80%;
+  margin: 0 auto; }
+#kjNavbar {
+  background-color: black; }
+  #kjNavbar img {
+    height: 55%;
+    width: 2%; }
+
+.album-menu-content {
+  background-color: black; }
+  .album-menu-content md-menu-item {
+    color: white; }
+
+.menu-dropdown-arrow {
+  vertical-align: middle;
+  color: grey; }

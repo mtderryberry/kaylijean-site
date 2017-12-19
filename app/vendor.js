@@ -1,6 +1,16 @@
 import 'jquery';
 import 'angular';
+import 'angular/angular.min.js';
 import 'angular-animate';
+import 'angular-animate/angular-animate.min.js';
 import 'angular-aria';
 import 'angular-material';
 import 'angular-ui-router';
+import 'angular-touch';
+import 'screenfull';
+import 'bootstrap';
+import 'angulargrid';
+import 'angular-super-gallery/dist/angular-super-gallery.js';
+import 'angular-super-gallery/dist/angular-super-gallery.css';
+import 'ng-image-gallery/dist/ng-image-gallery.min.js';
+import 'ng-image-gallery/dist/ng-image-gallery.min.css';

@@ -20,7 +20,7 @@
                 Bucket: bucketName
             }
 
-            const s3 = s3Svc.getS3(bucketName);
+            const s3 = s3Svc.getS3();
             const bucketUrl = "https://s3.us-west-2.amazonaws.com/" + bucketName + "/";
 
             let currentImageIndex = 0;

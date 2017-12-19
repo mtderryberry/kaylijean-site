@@ -1,4 +1,21 @@
 #kjNavbar {
 	background-color: black;
+
+	img {
+		height: 55%;
+		width: 2%;
+	}
 }
 
+.album-menu-content {
+	background-color: black;
+
+	md-menu-item {
+		color: white;
+	}
+}
+
+.menu-dropdown-arrow {
+	vertical-align: middle;
+	color: grey;
+}

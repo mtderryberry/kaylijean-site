@@ -2,18 +2,35 @@
     
     <md-toolbar>
         <div class="md-toolbar-tools" id="kjNavbar">
-            <md-button class="md-icon-button" aria-label="menu">
+            <img src = "/assets/kayli-logo-white.png" alt = "Test Image" />
+            <!-- <md-button class="md-icon-button" aria-label="menu">
                 <md-icon md-svg-src="/assets/kj-logo.svg" class="header-logo">
-            </md-button>
-            <md-button>Home</md-button>
-            <md-button>About</md-button>
-            <md-button>Contact</md-button>
+            </md-button> -->
+            <md-button ui-sref="root.home">Home</md-button>
+            <md-button ui-sref="root.about">About</md-button>
+            <md-menu md-offset="0 42">
+                <md-button aria-label="Open Albums menu" ng-mouseenter="openMenu($mdMenu, $event)">
+                    Albums
+                    <i class="material-icons menu-dropdown-arrow">arrow_drop_down</i>
+                </md-button>
+                <md-menu-content width="4" class="album-menu-content">
+                    <md-menu-item ng-repeat="title in albumTitles">
+                        <md-button ng-click="openAlbum(title)">
+                            <span ng-bind="title"></span>
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <md-button ui-sref="root.contact">Contact</md-button>
             <span flex></span>
             <md-button class="md-icon-button" aria-label="menu">
                 <md-icon md-svg-src="/assets/facebook-white.svg" class="header-logo">
             </md-button>
-            <md-button class="md-icon-button" aria-label="menu">
+            <md-button class="md-icon-button" aria-label="menu" href="https://www.instagram.com/kayli__jean/" target="_blank">
                 <md-icon md-svg-src="/assets/instagram-white.svg" class="header-logo">
+            </md-button>
+            <md-button class="md-icon-button" aria-label="menu" href="https://500px.com/kayli_jean" target="_blank">
+                <md-icon md-svg-src="/assets/five-hundred-pix-white.svg" class="header-logo">
             </md-button>
         </div>
     </md-toolbar>
