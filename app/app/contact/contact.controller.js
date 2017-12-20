@@ -28,7 +28,7 @@
 					/* more items */
 				],
 				ToAddresses: [
-					'mderryberryt@gmail.com',
+					'askkaylijean@gmail.com',
 					/* more items */
 				]
 			},
