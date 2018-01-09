@@ -40,9 +40,10 @@
                 require('aws-sdk/dist/aws-sdk');
                 AWS = window.AWS;
 
-                const credentials = {accessKeyId: 'AKIAJ4VLWAL7Y4JK3JWA', secretAccessKey: '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'};
-                AWS.config.update(credentials);
                 AWS.config.region = 'us-west-2';
+                AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+                    IdentityPoolId: 'us-west-2:5dd8d18e-0a34-4ec9-9582-1b4a6d902c75',
+                });
                  
                 // Set credentials and region
                 s3 = new AWS.S3({

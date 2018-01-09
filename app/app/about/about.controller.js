@@ -10,7 +10,7 @@
   function AboutCtrl($scope) {
     let self = this;
 
-    require("../../assets/images/sony_camera.jpg");
+    require("../../assets/images/kaylijean.jpg");
   }
 
 })();

@@ -10,6 +10,7 @@
   function NavbarCtrl($scope, s3Svc, $state) {
     let self = this;
     require("../../../assets/images/logo/kj-logo.svg");
+    require("../../../assets/images/logo/kj-logo-black.png");
     require("../../../assets/images/logo/kayli-logo-white.png");
     require("../../../assets/images/social/facebook-white.svg");
     require("../../../assets/images/social/instagram-white.svg");
@@ -45,6 +46,11 @@
     $scope.openMenu = function($mdMenu, ev) {
       	originatorEv = ev;
       	$mdMenu.open(ev);
+    };
+
+    $scope.closeMenu = function($mdMenu, ev) {
+      originatorEv = ev;
+      $mdMenu.close(ev);
     };
 
     $scope.openAlbum = function(albumName) {

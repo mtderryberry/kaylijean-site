@@ -1,60 +1,80 @@
 <div layout="column" ng-controller="ContactCtrl" class="contact-page">
 	<div class="contact-content">
+		<!-- <img src="/assets/kj-contact.jpg" alt=""> -->
 		<div class="contact-title">
 			<h1 class="md-display-2">Contact Me</h1>
 		</div>
-		<div class="contact-body">
+<!-- 			<div class="contact-body">
 			<h3 class="md-display">
 				To inquire about working with me or just to say hi, shoot an email over to askkaylijean@gmail.com or fill out the form below.
 			</h3>
-		</div>
-		<div class="contact-form">
-			<form name="contactForm" ng-submit="sendEmail()">
-				<div layout="row">
+		</div> -->
+		<div layout="row">
+			<div class="contact-form" flex="45" flex-offset="5">
+				<form name="contactForm" ng-submit="sendEmail()">
 					<div layout="column" flex>
-						<md-input-container flex>
-							<label>Name</label>
-							<input required="" name="clientName" ng-model="contact.clientName">
-							<div ng-messages="contactForm.clientName.$error">
-								<div ng-message="required">This is required.</div>
-							</div>
-						</md-input-container>
+						<div layout="row">
+							<md-input-container class="contactInputContainer" flex>
+								<label class="padding-left-two">Name</label>
+								<input required="" name="clientName" ng-model="contact.clientName" class="contactInput padding-left-two">
+								<div ng-messages="contactForm.clientName.$error">
+									<div ng-message="required">This is required.</div>
+								</div>
+							</md-input-container>
 
-						<md-input-container class="md-block" flex>
-							<label>Email</label>
-							<input required="" type="email" name="clientEmail" ng-model="contact.clientEmail" minlength="8" maxlength="100" ng-pattern="/^.+@.+\..+$/">
+							<md-input-container class="md-block contactInputContainer" flex>
+								<label class="padding-left-two">Email</label>
+								<input required="" type="email" name="clientEmail" ng-model="contact.clientEmail" minlength="8" maxlength="100" ng-pattern="/^.+@.+\..+$/" class="contactInput padding-left-two">
 
-							<div ng-messages="contactForm.clientEmail.$error" role="alert">
-							<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-								Your email must be between 8 and 100 characters long and look like an e-mail address.
-							</div>
-							</div>
-						</md-input-container>
+								<div ng-messages="contactForm.clientEmail.$error" role="alert">
+								<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+									Your email must be between 8 and 100 characters long and look like an e-mail address.
+								</div>
+								</div>
+							</md-input-container>
+						</div>
 
-						<md-input-container flex>
-							<label>Subject</label>
-							<input required="" name="clientSubject" ng-model="contact.clientSubject">
+						<md-input-container class="contactInputContainer" flex>
+							<label class="padding-left-two">Subject</label>
+							<input required="" name="clientSubject" ng-model="contact.clientSubject" class="contactInput padding-left-two">
 							<div ng-messages="contactForm.clientSubject.$error">
 								<div ng-message="required">This is required.</div>
 							</div>
 						</md-input-container>
-					</div>
 
-					<div layout="row" flex>
-						<md-input-container class="md-block contact-message-textarea">
-							<label>Message</label>
-							<textarea ng-model="contact.message" name="message" md-maxlength="150" rows="8" md-select-on-focus required></textarea>
+						<md-input-container class="md-block contact-message-textarea contactInputContainer"flex>
+							<label class="padding-left-two">Message</label>
+							<textarea ng-model="contact.message" name="message" md-maxlength="150" rows="8" md-select-on-focus required class="contactInput padding-left-two"></textarea>
 							<div ng-messages="contactForm.message.$error">
 								<div ng-message="required">This is required.</div>
 							</div>
 						</md-input-container>
 					</div>
-				</div>
 
+					<div layout="row">
+						<md-button type="submit" class="contact-submit md-raised">Submit</md-button>
+					</div>
+				</form>
+			</div>
+			<div flex="10"></div>
+			<div class="contact-info" flex>
 				<div layout="row">
-					<md-button type="submit" class="contact-submit md-primary md-raised">Submit</md-button>
+					<div flex="20">
+						<i class="material-icons">email</i>
+					</div>
+					<div class="textDiv" flex>
+						<span>askkaylijean@gmail.com</span>
+					</div>
 				</div>
-			</form>
+				<div layout="row">
+					<div flex="20">
+						<i class="material-icons">location_on</i>
+					</div>
+					<div class="textDiv" flex>
+						<span>Central Massachusetts</span>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

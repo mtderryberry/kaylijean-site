@@ -6,6 +6,12 @@ webpackJsonp([0],[
 /* 4 */
 /***/ (function(module, exports) {
 
+module.exports = "<div ng-controller=\"AlbumsCtrl\">\n\t<ng-image-gallery\n\t\timages=\"images\"\n\t\tmethods=\"methods\"\n\t\tconf=\"conf\"\n\t></ng-image-gallery>\n\t<div class=\"image-gallery-row\" ng-if=\"!subfolders\"> \n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in firstColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div>\n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in secondColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div> \n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in thirdColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div>\n<!-- \t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in fourthColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div> -->\n\t</div>\n\t<div layout=\"row\" ng-if=\"subfolders\">\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in firstColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in secondColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in thirdColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
 var g;
 
 // This works in non-strict mode
@@ -30,54 +36,64 @@ module.exports = g;
 
 
 /***/ }),
-/* 5 */,
 /* 6 */,
 /* 7 */,
 /* 8 */,
 /* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_app_js__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_app_js__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_app_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__app_app_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_routes_js__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_routes_js__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__app_app_routes_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_common_scss__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_common_scss__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_common_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__app_common_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_home_home_routes_js__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_home_home_routes_js__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_home_home_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__app_home_home_routes_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_home_home_controller_js__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_home_home_controller_js__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_home_home_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__app_home_home_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_home_home_scss__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_home_home_scss__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_home_home_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__app_home_home_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_about_about_routes_js__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_about_about_routes_js__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_about_about_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__app_about_about_routes_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_about_about_controller_js__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_about_about_controller_js__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_about_about_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__app_about_about_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_about_about_scss__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_about_about_scss__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_about_about_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__app_about_about_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_albums_albums_routes_js__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_albums_albums_routes_js__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_albums_albums_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__app_albums_albums_routes_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_albums_albums_controller_js__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_albums_albums_controller_js__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_albums_albums_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__app_albums_albums_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_albums_albums_service_js__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_albums_albums_service_js__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_albums_albums_service_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__app_albums_albums_service_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_contact_contact_routes_js__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_contact_contact_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__app_contact_contact_routes_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_contact_contact_controller_js__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_contact_contact_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__app_contact_contact_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_contact_contact_scss__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_contact_contact_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__app_contact_contact_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_services_s3_service_js__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_services_s3_service_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__app_services_s3_service_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_components_navbar_navbar_controller_js__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_components_navbar_navbar_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__app_components_navbar_navbar_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_scss__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_albums_albums_scss__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_albums_albums_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__app_albums_albums_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_contact_contact_routes_js__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_contact_contact_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__app_contact_contact_routes_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_contact_contact_controller_js__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_contact_contact_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__app_contact_contact_controller_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_contact_contact_scss__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_contact_contact_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__app_contact_contact_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_services_s3_service_js__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_services_s3_service_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__app_services_s3_service_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_controller_js__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_controller_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_components_navbar_navbar_scss__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_components_navbar_navbar_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18__app_components_navbar_navbar_scss__);
+
 
 
 
@@ -98,7 +114,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 13 */
+/* 21 */
 /***/ (function(module, exports) {
 
 /**
@@ -109,14 +125,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 (function () {
 
-		angular.module('kayliJeanApp', ['ui.router', 'ngMaterial', 'ngAnimate']).config(['$urlRouterProvider', '$locationProvider', function ($urlRouterProvider, $locationProvider) {
+		angular.module('kayliJeanApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'thatisuday.ng-image-gallery', 'ngMessages']).config(['$urlRouterProvider', '$locationProvider', function ($urlRouterProvider, $locationProvider) {
 				$urlRouterProvider.otherwise('/');
 				$locationProvider.html5Mode(true);
 		}]);
 })();
 
 /***/ }),
-/* 14 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -137,7 +153,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     template: '<div ui-view="navbar" class="navbar-view"></div>' + '<div ui-view="content" class="content-view"></div>'
                 },
                 'navbar@root': { //the common navbar  for the portal
-                    template: __webpack_require__(15)
+                    template: __webpack_require__(23)
                 },
                 'content@root': { //the main content for the portal
                     template: '<div ui-view class="page-content"></div>'
@@ -148,19 +164,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 })();
 
 /***/ }),
-/* 15 */
+/* 23 */
 /***/ (function(module, exports) {
 
-module.exports = "<div ng-controller=\"NavbarCtrl\">\n    \n    <md-toolbar>\n        <div class=\"md-toolbar-tools\" id=\"kjNavbar\">\n            <img src = \"/assets/kayli-logo-white.png\" alt = \"Test Image\" />\n            <!-- <md-button class=\"md-icon-button\" aria-label=\"menu\">\n                <md-icon md-svg-src=\"/assets/kj-logo.svg\" class=\"header-logo\">\n            </md-button> -->\n            <md-button ui-sref=\"root.home\">Home</md-button>\n            <md-button ui-sref=\"root.about\">About</md-button>\n            <md-menu md-offset=\"0 42\">\n                <md-button aria-label=\"Open Albums menu\" ng-mouseenter=\"openMenu($mdMenu, $event)\">\n                    Albums\n                    <i class=\"material-icons menu-dropdown-arrow\">arrow_drop_down</i>\n                </md-button>\n                <md-menu-content width=\"4\" class=\"album-menu-content\">\n                    <md-menu-item ng-repeat=\"title in albumTitles\">\n                        <md-button ng-click=\"openAlbum(title)\">\n                            <span ng-bind=\"title\"></span>\n                        </md-button>\n                    </md-menu-item>\n                </md-menu-content>\n            </md-menu>\n            <md-button ui-sref=\"root.contact\">Contact</md-button>\n            <span flex></span>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\">\n                <md-icon md-svg-src=\"/assets/facebook-white.svg\" class=\"header-logo\">\n            </md-button>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\" href=\"https://www.instagram.com/kayli__jean/\" target=\"_blank\">\n                <md-icon md-svg-src=\"/assets/instagram-white.svg\" class=\"header-logo\">\n            </md-button>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\" href=\"https://500px.com/kayli_jean\" target=\"_blank\">\n                <md-icon md-svg-src=\"/assets/five-hundred-pix-white.svg\" class=\"header-logo\">\n            </md-button>\n        </div>\n    </md-toolbar>\n\n</div>\n"
+module.exports = "<div ng-controller=\"NavbarCtrl\">\n    \n    <md-toolbar>\n        <div class=\"md-toolbar-tools\" id=\"kjNavbar\">\n            <img src = \"/assets/kayli-logo-white.png\" alt = \"Test Image\" />\n            <md-button ui-sref=\"root.home\">Home</md-button>\n            <md-button ui-sref=\"root.about\">About</md-button>\n            <md-menu md-offset=\"0 42\">\n                <md-button aria-label=\"Open Albums menu\" ng-mouseenter=\"openMenu($mdMenu, $event)\">\n                    Albums\n                    <i class=\"material-icons menu-dropdown-arrow\">arrow_drop_down</i>\n                </md-button>\n                <md-menu-content width=\"4\" class=\"album-menu-content\" ng-mouseleave=\"closeMenu($mdMenu, $event)\">\n                    <md-menu-item ng-repeat=\"title in albumTitles\">\n                        <md-button ng-click=\"openAlbum(title)\">\n                            <span ng-bind=\"title\"></span>\n                        </md-button>\n                    </md-menu-item>\n                </md-menu-content>\n            </md-menu>\n            <md-button ui-sref=\"root.contact\">Contact</md-button>\n            <span flex></span>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\" href=\"https://www.instagram.com/kayli__jean/\" target=\"_blank\">\n                <md-icon md-svg-src=\"/assets/instagram-white.svg\" class=\"header-logo\">\n            </md-button>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\" href=\"https://500px.com/kayli_jean\" target=\"_blank\">\n                <md-icon md-svg-src=\"/assets/five-hundred-pix-white.svg\" class=\"header-logo\">\n            </md-button>\n        </div>\n    </md-toolbar>\n\n</div>\n"
 
 /***/ }),
-/* 16 */
+/* 24 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 17 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -179,20 +195,20 @@ module.exports = "<div ng-controller=\"NavbarCtrl\">\n    \n    <md-toolbar>\n  
 
         $stateProvider.state('root.home', {
             url: '/home',
-            template: __webpack_require__(18),
+            template: __webpack_require__(26),
             resolve: {}
         });
     };
 })();
 
 /***/ }),
-/* 18 */
+/* 26 */
 /***/ (function(module, exports) {
 
-module.exports = "<div layout=\"row\" layout-padding ng-controller=\"HomeCtrl\">\n\t<div id=\"bg\" ng-animate-swap=\"currentPicture\" class=\"swap-animation\">\n\t\t<img ng-src=\"{{currentPicture}}\" alt=\"\">\n\t</div>\n</div>"
+module.exports = "<div layout=\"row\" ng-controller=\"HomeCtrl\" class=\"homeRow\">\n\t<div id=\"bg\" ng-animate-swap=\"currentPicture\" class=\"swap-animation\">\n\t\t<img ng-src=\"{{currentPicture}}\" alt=\"\">\n\t</div>\n</div>"
 
 /***/ }),
-/* 19 */
+/* 27 */
 /***/ (function(module, exports) {
 
 /**
@@ -228,7 +244,7 @@ module.exports = "<div layout=\"row\" layout-padding ng-controller=\"HomeCtrl\">
           $scope.s3Pictures.push(bucketUrl + data.Contents[i].Key);
         }
         $scope.currentPicture = $scope.s3Pictures[0];
-        $interval(changePicture, 4000);
+        $interval(changePicture, 8000);
         $scope.$apply();
       }
     });
@@ -244,13 +260,13 @@ module.exports = "<div layout=\"row\" layout-padding ng-controller=\"HomeCtrl\">
 })();
 
 /***/ }),
-/* 20 */
+/* 28 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 21 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -268,20 +284,20 @@ module.exports = "<div layout=\"row\" layout-padding ng-controller=\"HomeCtrl\">
 
         $stateProvider.state('root.about', {
             url: '/about',
-            template: __webpack_require__(22),
+            template: __webpack_require__(30),
             resolve: {}
         });
     };
 })();
 
 /***/ }),
-/* 22 */
+/* 30 */
 /***/ (function(module, exports) {
 
 module.exports = "<div layout=\"column\" layout-padding ng-controller=\"AboutCtrl\" class=\"about-all\">\n\t<div class=\"about-content\">\n\t\t<div class=\"about-title\">\n\t\t\t<h2 class=\"md-display\">\n\t\t\t\tAbout Kayli Jean\n\t\t\t</h2>\n\t\t</div>\n\t\t<div class=\"about-body\">\n\t\t\t<h4 class=\"md-display\">\n\t\t\t\tTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test \n\t\t\t</h4>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
-/* 23 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -295,24 +311,24 @@ module.exports = "<div layout=\"column\" layout-padding ng-controller=\"AboutCtr
   function AboutCtrl($scope) {
     let self = this;
 
-    __webpack_require__(24);
+    __webpack_require__(32);
   }
 })();
 
 /***/ }),
-/* 24 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/sony_camera.jpg";
+module.exports = __webpack_require__.p + "assets/kaylijean.jpg";
 
 /***/ }),
-/* 25 */
+/* 33 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 26 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -330,10 +346,18 @@ module.exports = __webpack_require__.p + "assets/sony_camera.jpg";
 
         $stateProvider.state('root.albums', {
             url: '/albums/:album',
-            template: __webpack_require__(27),
+            template: __webpack_require__(4),
             resolve: {
                 currentAlbum: ['$stateParams', 'albumSvc', function ($stateParams, albumSvc) {
                     albumSvc.getAlbumObj().currentAlbum = $stateParams.album;
+                }]
+            }
+        }).state('root.subalbums', {
+            url: '/albums/:album/:subalbum',
+            template: __webpack_require__(4),
+            resolve: {
+                currentAlbum: ['$stateParams', 'albumSvc', function ($stateParams, albumSvc) {
+                    albumSvc.getAlbumObj().currentAlbum = $stateParams.album + '/' + $stateParams.subalbum;
                 }]
             }
         });
@@ -341,56 +365,149 @@ module.exports = __webpack_require__.p + "assets/sony_camera.jpg";
 })();
 
 /***/ }),
-/* 27 */
-/***/ (function(module, exports) {
-
-module.exports = "<div layout=\"row\" layout-padding ng-controller=\"AlbumsCtrl\">\n\t<span ng-bind=\"albumObj.currentAlbum\"></span>\n\t<div ng-repeat=\"picture in s3Pictures\">\n\t\t<img ng-src=\"{{picture}}\" alt=\"\">\n\t</div>\n</div>"
-
-/***/ }),
-/* 28 */
+/* 35 */
 /***/ (function(module, exports) {
 
 /**
  * Created by krusheth on 3/15/17.
  */
 (function () {
-  angular.module('kayliJeanApp').controller('AlbumsCtrl', AlbumsCtrl);
+	angular.module('kayliJeanApp').controller('AlbumsCtrl', AlbumsCtrl);
 
-  AlbumsCtrl.$inject = ['$scope', 'albumSvc', 's3Svc'];
+	AlbumsCtrl.$inject = ['$scope', 'albumSvc', 's3Svc', '$http', '$state'];
 
-  function AlbumsCtrl($scope, albumSvc, s3Svc) {
-    let self = this;
+	function AlbumsCtrl($scope, albumSvc, s3Svc, $http, $state) {
+		let self = this;
 
-    $scope.albumObj = albumSvc.getAlbumObj();
-    $scope.s3Pictures = [];
+		$scope.albumObj = albumSvc.getAlbumObj();
+		$scope.s3Pictures = [];
 
-    const bucketName = "kaylijean-albums";
+		const bucketName = "kaylijean-albums";
 
-    const params = {
-      Bucket: bucketName,
-      Prefix: $scope.albumObj.currentAlbum
-    };
+		const params = {
+			Bucket: bucketName,
+			Prefix: $scope.albumObj.currentAlbum + '/',
+			Delimiter: '/'
+		};
 
-    const s3 = s3Svc.getS3();
-    const bucketUrl = "https://s3.us-west-2.amazonaws.com/" + bucketName + "/";
+		const s3 = s3Svc.getS3();
+		const bucketUrl = "https://s3.us-west-2.amazonaws.com/" + bucketName + "/";
 
-    s3.listObjectsV2(params, function (err, data) {
-      if (err) {
-        console.log(err, err.stack); // an error occurred
-      } else {
-        for (let i = 0; i < data.Contents.length; i++) {
-          if (data.Contents[i].Size > 0) {
-            $scope.s3Pictures.push(bucketUrl + data.Contents[i].Key);
-          }
-        }
-        $scope.$apply();
-      }
-    });
-  }
+		$scope.subfolders = false;
+
+		$scope.images = [];
+
+		$scope.firstColumnImages = [];
+		$scope.secondColumnImages = [];
+		$scope.thirdColumnImages = [];
+
+		// gallery methods
+		$scope.methods = {};
+
+		// so you will bind openGallery method to a button on page
+		// to open this gallery like ng-click="openGallery();"
+		$scope.openGallery = function (index) {
+			$scope.methods.open(index - 1);
+
+			// You can also open gallery model with visible image index
+			// Image at that index will be shown when gallery modal opens
+			//scope.methods.open(index);
+		};
+
+		// Similar to above function
+		$scope.closeGallery = function () {
+			$scope.methods.close();
+		};
+
+		$scope.nextImg = function () {
+			$scope.methods.next();
+		};
+
+		$scope.prevImg = function () {
+			$scope.methods.prev();
+		};
+
+		$scope.openAlbum = function (albumName) {
+			$state.go("root.subalbums", {
+				"album": $scope.albumObj.currentAlbum,
+				"subalbum": albumName
+			});
+		};
+
+		$scope.conf = {
+			thumbnails: false,
+			thumbSize: 300,
+			inline: false,
+			bubbles: true,
+			bubbleSize: 40,
+			imgBubbles: true,
+			bgClose: false,
+			piracy: false,
+			imgAnim: 'fadeup'
+		};
+
+		s3.listObjectsV2(params, function (err, data) {
+			if (err) {
+				console.log(err, err.stack); // an error occurred
+			} else {
+				let currentColumn = 0;
+				// there are sub folders
+				if (data.CommonPrefixes.length > 0) {
+					$scope.subfolders = true;
+					for (let i = 0; i < data.CommonPrefixes.length; i++) {
+						let currentPrefix = data.CommonPrefixes[i].Prefix;
+						let currentCoverPhoto = bucketUrl + currentPrefix + 'Cover.png';
+						let captionText = currentPrefix.split('/')[1];
+						let imageObj = {
+							id: i,
+							url: currentCoverPhoto,
+							caption: captionText
+						};
+						if (currentColumn === 0) {
+							$scope.firstColumnImages.push(imageObj);
+						} else if (currentColumn === 1) {
+							$scope.secondColumnImages.push(imageObj);
+						} else {
+							$scope.thirdColumnImages.push(imageObj);
+						}
+						currentColumn++;
+						if (currentColumn === 3) {
+							currentColumn = 0;
+						}
+					}
+				}
+				// no sub folders. show the image feed
+				else {
+						for (let i = 0; i < data.Contents.length; i++) {
+							if (data.Contents[i].Size > 0) {
+								let current = bucketUrl + data.Contents[i].Key;
+								let currentImageObj = {
+									id: i,
+									url: current
+								};
+								$scope.images.push(currentImageObj);
+								if (currentColumn === 0) {
+									$scope.firstColumnImages.push(currentImageObj);
+								} else if (currentColumn === 1) {
+									$scope.secondColumnImages.push(currentImageObj);
+								} else {
+									$scope.thirdColumnImages.push(currentImageObj);
+								}
+								currentColumn++;
+								if (currentColumn === 3) {
+									currentColumn = 0;
+								}
+							}
+						}
+					}
+				$scope.$apply();
+			}
+		});
+	}
 })();
 
 /***/ }),
-/* 29 */
+/* 36 */
 /***/ (function(module, exports) {
 
 /**
@@ -419,7 +536,13 @@ module.exports = "<div layout=\"row\" layout-padding ng-controller=\"AlbumsCtrl\
 })();
 
 /***/ }),
-/* 30 */
+/* 37 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -437,53 +560,94 @@ module.exports = "<div layout=\"row\" layout-padding ng-controller=\"AlbumsCtrl\
 
         $stateProvider.state('root.contact', {
             url: '/contact',
-            template: __webpack_require__(31),
+            template: __webpack_require__(39),
             resolve: {}
         });
     };
 })();
 
 /***/ }),
-/* 31 */
+/* 39 */
 /***/ (function(module, exports) {
 
-module.exports = "<div layout=\"column\" ng-controller=\"ContactCtrl\" class=\"contact-page\">\n\t<div class=\"contact-content\">\n\t\t<div class=\"contact-title\">\n\t\t\t<h1 class=\"md-display-2\">Contact Me</h1>\n\t\t</div>\n\t\t<div class=\"contact-body\">\n\t\t\t<h3 class=\"md-display\">\n\t\t\t\tTo inquire about working with me or just to say hi, shoot an email over to askkaylijean@gmail.com or fill out the form below.\n\t\t\t</h3>\n\t\t</div>\n\t\t<div class=\"contact-form\">\n\t\t\t<form name=\"contactForm\">\n\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t<div layout=\"column\" flex>\n\t\t\t\t\t\t<md-input-container flex>\n\t\t\t\t\t\t\t<label>Name</label>\n\t\t\t\t\t\t\t<input required=\"\" name=\"clientName\" ng-model=\"contact.clientName\">\n\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientName.$error\">\n\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</md-input-container>\n\n\t\t\t\t\t\t<md-input-container class=\"md-block\" flex>\n\t\t\t\t\t\t\t<label>Email</label>\n\t\t\t\t\t\t\t<input required=\"\" type=\"email\" name=\"clientEmail\" ng-model=\"contact.clientEmail\" minlength=\"8\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\">\n\n\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientEmail.$error\" role=\"alert\">\n\t\t\t\t\t\t\t<div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n\t\t\t\t\t\t\t\tYour email must be between 8 and 100 characters long and look like an e-mail address.\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</md-input-container>\n\n\t\t\t\t\t\t<md-input-container flex>\n\t\t\t\t\t\t\t<label>Subject</label>\n\t\t\t\t\t\t\t<input required=\"\" name=\"clientSubject\" ng-model=\"contact.clientSubject\">\n\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientSubject.$error\">\n\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</md-input-container>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div layout=\"row\" flex>\n\t\t\t\t\t\t<md-input-container class=\"md-block contact-message-textarea\">\n\t\t\t\t\t\t\t<label>Message</label>\n\t\t\t\t\t\t\t<textarea ng-model=\"contactForm.message\" md-maxlength=\"150\" rows=\"8\" md-select-on-focus required></textarea>\n\t\t\t\t\t\t\t<div ng-messages=\"contactForm.message.$error\">\n\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</md-input-container>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t<md-button type=\"submit\" class=\"contact-submit md-primary md-raised\">Submit</md-button>\n\t\t\t\t</div>\n\t\t\t</form>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<div layout=\"column\" ng-controller=\"ContactCtrl\" class=\"contact-page\">\n\t<div class=\"contact-content\">\n\t\t<!-- <img src=\"/assets/kj-contact.jpg\" alt=\"\"> -->\n\t\t<div class=\"contact-title\">\n\t\t\t<h1 class=\"md-display-2\">Contact Me</h1>\n\t\t</div>\n<!-- \t\t\t<div class=\"contact-body\">\n\t\t\t<h3 class=\"md-display\">\n\t\t\t\tTo inquire about working with me or just to say hi, shoot an email over to askkaylijean@gmail.com or fill out the form below.\n\t\t\t</h3>\n\t\t</div> -->\n\t\t<div layout=\"row\">\n\t\t\t<div class=\"contact-form\" flex=\"45\" flex-offset=\"5\">\n\t\t\t\t<form name=\"contactForm\" ng-submit=\"sendEmail()\">\n\t\t\t\t\t<div layout=\"column\" flex>\n\t\t\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t\t\t<md-input-container class=\"contactInputContainer\" flex>\n\t\t\t\t\t\t\t\t<label class=\"padding-left-two\">Name</label>\n\t\t\t\t\t\t\t\t<input required=\"\" name=\"clientName\" ng-model=\"contact.clientName\" class=\"contactInput padding-left-two\">\n\t\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientName.$error\">\n\t\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</md-input-container>\n\n\t\t\t\t\t\t\t<md-input-container class=\"md-block contactInputContainer\" flex>\n\t\t\t\t\t\t\t\t<label class=\"padding-left-two\">Email</label>\n\t\t\t\t\t\t\t\t<input required=\"\" type=\"email\" name=\"clientEmail\" ng-model=\"contact.clientEmail\" minlength=\"8\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\" class=\"contactInput padding-left-two\">\n\n\t\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientEmail.$error\" role=\"alert\">\n\t\t\t\t\t\t\t\t<div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n\t\t\t\t\t\t\t\t\tYour email must be between 8 and 100 characters long and look like an e-mail address.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</md-input-container>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<md-input-container class=\"contactInputContainer\" flex>\n\t\t\t\t\t\t\t<label class=\"padding-left-two\">Subject</label>\n\t\t\t\t\t\t\t<input required=\"\" name=\"clientSubject\" ng-model=\"contact.clientSubject\" class=\"contactInput padding-left-two\">\n\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientSubject.$error\">\n\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</md-input-container>\n\n\t\t\t\t\t\t<md-input-container class=\"md-block contact-message-textarea contactInputContainer\"flex>\n\t\t\t\t\t\t\t<label class=\"padding-left-two\">Message</label>\n\t\t\t\t\t\t\t<textarea ng-model=\"contact.message\" name=\"message\" md-maxlength=\"150\" rows=\"8\" md-select-on-focus required class=\"contactInput padding-left-two\"></textarea>\n\t\t\t\t\t\t\t<div ng-messages=\"contactForm.message.$error\">\n\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</md-input-container>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t\t<md-button type=\"submit\" class=\"contact-submit md-raised\">Submit</md-button>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t\t<div flex=\"10\"></div>\n\t\t\t<div class=\"contact-info\" flex>\n\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t<div flex=\"20\">\n\t\t\t\t\t\t<i class=\"material-icons\">email</i>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"textDiv\" flex>\n\t\t\t\t\t\t<span>askkaylijean@gmail.com</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t<div flex=\"20\">\n\t\t\t\t\t\t<i class=\"material-icons\">location_on</i>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"textDiv\" flex>\n\t\t\t\t\t\t<span>Central Massachusetts</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
-/* 32 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
  * Created by krusheth on 3/15/17.
  */
 (function () {
-  angular.module('kayliJeanApp').controller('ContactCtrl', ContactCtrl);
+	angular.module('kayliJeanApp').controller('ContactCtrl', ContactCtrl);
 
-  ContactCtrl.$inject = ['$scope'];
+	ContactCtrl.$inject = ['$scope', 's3Svc'];
 
-  function ContactCtrl($scope) {
-    let self = this;
+	function ContactCtrl($scope, s3Svc) {
+		let self = this;
 
-    $scope.contact = {};
+		__webpack_require__(41);
 
-    __webpack_require__(33);
-  }
+		$scope.contact = {};
+
+		// require("../../assets/images/ocean.jpg");
+
+		$scope.sendEmail = function () {
+
+			const ses = s3Svc.getSES();
+
+			// Create sendEmail params 
+			var params = {
+				Destination: { /* required */
+					CcAddresses: [$scope.contact.clientEmail],
+					ToAddresses: ['askkaylijean@gmail.com']
+				},
+				Message: { /* required */
+					Body: { /* required */
+						Text: {
+							Charset: "UTF-8",
+							Data: $scope.contact.message
+						}
+					},
+					Subject: {
+						Charset: 'UTF-8',
+						Data: $scope.contact.clientSubject
+					}
+				},
+				Source: 'kaylijeansite@gmail.com', /* required */
+				ReplyToAddresses: [
+					/* more items */
+				]
+			};
+
+			// Create the promise and SES service object
+			var sendPromise = ses.sendEmail(params).promise();
+
+			// Handle promise's fulfilled/rejected states
+			sendPromise.then(function (data) {
+				console.log(data.MessageId);
+			}).catch(function (err) {
+				console.error(err, err.stack);
+			});
+		};
+	}
 })();
 
 /***/ }),
-/* 33 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/ocean.jpg";
+module.exports = __webpack_require__.p + "assets/kj-contact.jpg";
 
 /***/ }),
-/* 34 */
+/* 42 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 35 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -499,9 +663,11 @@ module.exports = __webpack_require__.p + "assets/ocean.jpg";
 
         let AWS;
         let s3;
+        let ses;
 
         return {
-            getS3: getS3
+            getS3: getS3,
+            getSES: getSES
         };
 
         function getS3() {
@@ -511,10 +677,17 @@ module.exports = __webpack_require__.p + "assets/ocean.jpg";
             return s3;
         }
 
+        function getSES() {
+            if (angular.isUndefined(ses)) {
+                init();
+            }
+            return ses;
+        }
+
         function init() {
             if (angular.isUndefined(AWS) && angular.isUndefined(s3)) {
                 // Import the Amazon S3 service client
-                __webpack_require__(36);
+                __webpack_require__(44);
                 AWS = window.AWS;
 
                 const credentials = { accessKeyId: 'AKIAJ4VLWAL7Y4JK3JWA', secretAccessKey: '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' };
@@ -525,13 +698,17 @@ module.exports = __webpack_require__.p + "assets/ocean.jpg";
                 s3 = new AWS.S3({
                     apiVersion: '2006-03-01'
                 });
+
+                ses = new AWS.SES({
+                    apiVersion: '2010-12-01'
+                });
             }
         }
     }
 })();
 
 /***/ }),
-/* 36 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(setImmediate, global) {var require;var require;var __WEBPACK_AMD_DEFINE_RESULT__;// AWS SDK for JavaScript v2.169.0
@@ -139275,10 +139452,10 @@ require('../clients/browser_default');
 },{"../clients/browser_default":168,"./browser_loader":230,"./core":233}]},{},[487]);
 
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(37).setImmediate, __webpack_require__(4)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(45).setImmediate, __webpack_require__(5)))
 
 /***/ }),
-/* 37 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -139331,13 +139508,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(38);
+__webpack_require__(46);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 38 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -139527,10 +139704,10 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(39)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(47)))
 
 /***/ }),
-/* 39 */
+/* 47 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -139720,7 +139897,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 40 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -139733,11 +139910,12 @@ process.umask = function() { return 0; };
 
   function NavbarCtrl($scope, s3Svc, $state) {
     let self = this;
-    __webpack_require__(41);
-    __webpack_require__(42);
-    __webpack_require__(43);
-    __webpack_require__(44);
-    __webpack_require__(45);
+    __webpack_require__(49);
+    __webpack_require__(50);
+    __webpack_require__(51);
+    __webpack_require__(52);
+    __webpack_require__(53);
+    __webpack_require__(54);
 
     $scope.albumTitles = [];
 
@@ -139770,6 +139948,11 @@ process.umask = function() { return 0; };
       $mdMenu.open(ev);
     };
 
+    $scope.closeMenu = function ($mdMenu, ev) {
+      originatorEv = ev;
+      $mdMenu.close(ev);
+    };
+
     $scope.openAlbum = function (albumName) {
       $state.go("root.albums", { "album": albumName });
     };
@@ -139777,40 +139960,46 @@ process.umask = function() { return 0; };
 })();
 
 /***/ }),
-/* 41 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/kj-logo.svg";
 
 /***/ }),
-/* 42 */
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/kj-logo-black.png";
+
+/***/ }),
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/kayli-logo-white.png";
 
 /***/ }),
-/* 43 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/facebook-white.svg";
 
 /***/ }),
-/* 44 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/instagram-white.svg";
 
 /***/ }),
-/* 45 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/five-hundred-pix-white.svg";
 
 /***/ }),
-/* 46 */
+/* 55 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-],[12]);
+],[20]);

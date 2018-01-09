@@ -23,6 +23,15 @@
                     }],
                 }
             })
+            .state('root.subalbums', {
+                url: '/albums/:album/:subalbum',
+                template: require('./albums.html'),
+                resolve: {
+                    currentAlbum: ['$stateParams', 'albumSvc', function ($stateParams, albumSvc) {
+                        albumSvc.getAlbumObj().currentAlbum = $stateParams.album + '/' + $stateParams.subalbum;
+                    }],
+                }
+            })
     };
 
 })();

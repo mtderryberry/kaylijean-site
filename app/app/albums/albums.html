@@ -1,7 +1,38 @@
-<div layout-padding ng-controller="AlbumsCtrl">
+<div ng-controller="AlbumsCtrl">
 	<ng-image-gallery
 		images="images"
 		methods="methods"
 		conf="conf"
 	></ng-image-gallery>
+	<div class="image-gallery-row" ng-if="!subfolders"> 
+		<div class="image-gallery-column">
+			<img ng-repeat="pic in firstColumnImages" ng-src="{{pic.url}}" alt="" ng-click="openGallery(pic.id)"/>
+		</div>
+		<div class="image-gallery-column">
+			<img ng-repeat="pic in secondColumnImages" ng-src="{{pic.url}}" alt="" ng-click="openGallery(pic.id)"/>
+		</div> 
+		<div class="image-gallery-column">
+			<img ng-repeat="pic in thirdColumnImages" ng-src="{{pic.url}}" alt="" ng-click="openGallery(pic.id)"/>
+		</div>
+	</div>
+	<div layout="row" ng-if="subfolders">
+		<div layout="column" flex>
+			<div ng-repeat="pic in firstColumnImages" class="gallery-div">
+				<img ng-src="{{pic.url}}" alt="" ng-click="openAlbum(pic.caption)" class="gallery-picture"/>
+				<span class="gallery-caption" ng-bind="pic.caption"></span>
+			</div>
+		</div>
+		<div layout="column" flex>
+			<div ng-repeat="pic in secondColumnImages" class="gallery-div">
+				<img ng-src="{{pic.url}}" alt="" ng-click="openAlbum(pic.caption)" class="gallery-picture"/>
+				<span class="gallery-caption" ng-bind="pic.caption"></span>
+			</div>
+		</div>
+		<div layout="column" flex>
+			<div ng-repeat="pic in thirdColumnImages" class="gallery-div">
+				<img ng-src="{{pic.url}}" alt="" ng-click="openAlbum(pic.caption)" class="gallery-picture"/>
+				<span class="gallery-caption" ng-bind="pic.caption"></span>
+			</div>
+		</div>
+	</div>
 </div>

@@ -4,9 +4,10 @@
 
 .contact-content {
 	height: 100%;
-/*	background-image: url("/assets/ocean.jpg");
+	background-image: url("/assets/kj-contact.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;*/
+	background-size: 100% 100%;
+	color: white;
 }
 
 .contact-title {
@@ -25,9 +26,47 @@
 .contact-submit {
 	display: block;
 	margin: 0 auto;
+	margin-bottom: 1%;
 }
 
-.contact-form {
-	width: 80%;
-	margin: 0 auto;
+/*.contact-form {
+	background-color: lightgrey;
+	border-radius: 5px;
+}*/
+
+.contactInput {
+	background-color: lightgrey !important;
+	border-width: 1px !important;
+	/*border-color: white !important;*/
+	border-radius: 5px !important;
+}
+
+.contactInputContainer {
+	margin-top: 9px;
+	margin-bottom: 9px;
+}
+
+.padding-left-two {
+	padding-left: 2% !important;
+}
+
+.contact-info {
+	color: white;
+
+	.textDiv {
+		height: 48px;
+
+		span {
+			line-height: 48px;
+			font-size: 24px;
+			vertical-align: middle;
+		}
+	}
+
+	i {
+		color: grey;
+		vertical-align: middle;
+		font-size: 48px;
+	}
+
 }

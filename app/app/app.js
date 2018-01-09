@@ -6,7 +6,7 @@
 
 (function () {
 
-  angular.module('kayliJeanApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'angularGrid', 'angularSuperGallery', 'thatisuday.ng-image-gallery'])
+  angular.module('kayliJeanApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'thatisuday.ng-image-gallery', 'ngMessages'])
 
   .config(['$urlRouterProvider', '$locationProvider', function ($urlRouterProvider, $locationProvider) {
 		$urlRouterProvider.otherwise('/');

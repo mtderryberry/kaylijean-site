@@ -10,6 +10,8 @@
   function ContactCtrl($scope, s3Svc) {
     let self = this;
 
+    require("../../assets/images/kj-contact.jpg");
+
 	$scope.contact = {
 
 	};

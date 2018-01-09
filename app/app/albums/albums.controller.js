@@ -5,9 +5,9 @@
   angular.module('kayliJeanApp')
     .controller('AlbumsCtrl', AlbumsCtrl);
 
-  AlbumsCtrl.$inject = ['$scope', 'albumSvc', 's3Svc', 'angularGridInstance', '$http'];
+  AlbumsCtrl.$inject = ['$scope', 'albumSvc', 's3Svc', '$http', '$state'];
 
-  function AlbumsCtrl($scope, albumSvc, s3Svc, $http) {
+  function AlbumsCtrl($scope, albumSvc, s3Svc, $http, $state) {
     let self = this;
 
     $scope.albumObj = albumSvc.getAlbumObj();
@@ -17,22 +17,28 @@
 
 	const params = {
         Bucket: bucketName,
-        Prefix: $scope.albumObj.currentAlbum
+        Prefix: $scope.albumObj.currentAlbum + '/',
+        Delimiter: '/',
     }
 
     const s3 = s3Svc.getS3();
     const bucketUrl = "https://s3.us-west-2.amazonaws.com/" + bucketName + "/";
 
+    $scope.subfolders = false;
 
     $scope.images = [];
+
+    $scope.firstColumnImages = [];
+    $scope.secondColumnImages = [];
+    $scope.thirdColumnImages = [];
 
 	// gallery methods
 	$scope.methods = {};
 
 	// so you will bind openGallery method to a button on page
 	// to open this gallery like ng-click="openGallery();"
-	$scope.openGallery = function(){
-		$scope.methods.open();
+	$scope.openGallery = function(index){
+		$scope.methods.open(index-1);
 
 		// You can also open gallery model with visible image index
 		// Image at that index will be shown when gallery modal opens
@@ -52,8 +58,15 @@
 		$scope.methods.prev();
 	};
 
+	$scope.openAlbum = function(albumName) {
+        $state.go("root.subalbums", {
+        	"album": $scope.albumObj.currentAlbum,
+        	"subalbum": albumName
+        });
+    }
+
 	$scope.conf = {
-		thumbnails  	:   true,
+		thumbnails  	:   false,
 		thumbSize		: 	300,
 		inline      	:   false,
 		bubbles     	:   true,
@@ -69,12 +82,58 @@
 			console.log(err, err.stack); // an error occurred
 		}
 		else {
-			for (let i = 0; i < data.Contents.length; i++) {
-				if (data.Contents[i].Size > 0) {
-					$scope.images.push({
+			let currentColumn = 0;
+			// there are sub folders
+			if (data.CommonPrefixes.length > 0) {
+				$scope.subfolders = true;
+				for (let i = 0; i < data.CommonPrefixes.length; i++) {
+					let currentPrefix = data.CommonPrefixes[i].Prefix;
+					let currentCoverPhoto = bucketUrl + currentPrefix + 'Cover.png';
+					let captionText = currentPrefix.split('/')[1];
+					let imageObj = {
 						id : i,
-						url : bucketUrl + data.Contents[i].Key,
-					});
+						url : currentCoverPhoto,
+						caption: captionText
+					};
+					if (currentColumn === 0) {
+						$scope.firstColumnImages.push(imageObj);
+					}
+					else if (currentColumn === 1) {
+						$scope.secondColumnImages.push(imageObj);
+					}
+					else  {
+						$scope.thirdColumnImages.push(imageObj);
+					}
+					currentColumn++;
+					if (currentColumn === 3) {
+						currentColumn = 0;
+					}
+				}
+			}
+			// no sub folders. show the image feed
+			else {
+				for (let i = 0; i < data.Contents.length; i++) {
+					if (data.Contents[i].Size > 0) {
+						let current = bucketUrl + data.Contents[i].Key;
+						let currentImageObj = {
+							id: i,
+							url: current
+						};
+						$scope.images.push(currentImageObj);
+						if (currentColumn === 0) {
+							$scope.firstColumnImages.push(currentImageObj);
+						}
+						else if (currentColumn === 1) {
+							$scope.secondColumnImages.push(currentImageObj);
+						}
+						else {
+							$scope.thirdColumnImages.push(currentImageObj);
+						}
+						currentColumn++;
+						if (currentColumn === 3) {
+							currentColumn = 0;
+						}
+					}
 				}
 			}
 			$scope.$apply();

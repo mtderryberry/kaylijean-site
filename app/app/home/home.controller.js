@@ -34,7 +34,7 @@
 						$scope.s3Pictures.push(bucketUrl + data.Contents[i].Key);
 					}
                     $scope.currentPicture = $scope.s3Pictures[0];
-                    $interval(changePicture, 4000);
+                    $interval(changePicture, 8000);
 					$scope.$apply();
 				}
 			});
