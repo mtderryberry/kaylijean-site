@@ -6,7 +6,7 @@ webpackJsonp([0],[
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = "<div ng-controller=\"AlbumsCtrl\">\n\t<ng-image-gallery\n\t\timages=\"images\"\n\t\tmethods=\"methods\"\n\t\tconf=\"conf\"\n\t></ng-image-gallery>\n\t<div class=\"image-gallery-row\" ng-if=\"!subfolders\"> \n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in firstColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div>\n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in secondColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div> \n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in thirdColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div>\n<!-- \t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in fourthColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div> -->\n\t</div>\n\t<div layout=\"row\" ng-if=\"subfolders\">\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in firstColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in secondColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in thirdColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<div ng-controller=\"AlbumsCtrl\">\n\t<ng-image-gallery\n\t\timages=\"images\"\n\t\tmethods=\"methods\"\n\t\tconf=\"conf\"\n\t></ng-image-gallery>\n\t<div class=\"image-gallery-row\" ng-if=\"!subfolders\"> \n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in firstColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div>\n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in secondColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div> \n\t\t<div class=\"image-gallery-column\">\n\t\t\t<img ng-repeat=\"pic in thirdColumnImages\" ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openGallery(pic.id)\"/>\n\t\t</div>\n\t</div>\n\t<div layout=\"row\" ng-if=\"subfolders\">\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in firstColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in secondColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t\t<div layout=\"column\" flex>\n\t\t\t<div ng-repeat=\"pic in thirdColumnImages\" class=\"gallery-div\">\n\t\t\t\t<img ng-src=\"{{pic.url}}\" alt=\"\" ng-click=\"openAlbum(pic.caption)\" class=\"gallery-picture\"/>\n\t\t\t\t<span class=\"gallery-caption\" ng-bind=\"pic.caption\"></span>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
 /* 5 */
@@ -456,7 +456,7 @@ module.exports = __webpack_require__.p + "assets/kaylijean.jpg";
 					$scope.subfolders = true;
 					for (let i = 0; i < data.CommonPrefixes.length; i++) {
 						let currentPrefix = data.CommonPrefixes[i].Prefix;
-						let currentCoverPhoto = bucketUrl + currentPrefix + 'Cover.png';
+						let currentCoverPhoto = bucketUrl + currentPrefix + 'Cover.jpg';
 						let captionText = currentPrefix.split('/')[1];
 						let imageObj = {
 							id: i,
@@ -690,9 +690,10 @@ module.exports = __webpack_require__.p + "assets/kj-contact.jpg";
                 __webpack_require__(44);
                 AWS = window.AWS;
 
-                const credentials = { accessKeyId: 'AKIAJ4VLWAL7Y4JK3JWA', secretAccessKey: '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' };
-                AWS.config.update(credentials);
                 AWS.config.region = 'us-west-2';
+                AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+                    IdentityPoolId: 'us-west-2:5dd8d18e-0a34-4ec9-9582-1b4a6d902c75'
+                });
 
                 // Set credentials and region
                 s3 = new AWS.S3({

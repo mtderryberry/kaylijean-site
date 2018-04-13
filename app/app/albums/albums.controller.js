@@ -88,7 +88,7 @@
 				$scope.subfolders = true;
 				for (let i = 0; i < data.CommonPrefixes.length; i++) {
 					let currentPrefix = data.CommonPrefixes[i].Prefix;
-					let currentCoverPhoto = bucketUrl + currentPrefix + 'Cover.png';
+					let currentCoverPhoto = bucketUrl + currentPrefix + 'Cover.jpg';
 					let captionText = currentPrefix.split('/')[1];
 					let imageObj = {
 						id : i,
