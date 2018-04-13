@@ -34,6 +34,24 @@ body {
 
 .swap-animation.ng-leave-active {
   opacity: 0; }
+
+.homeRow {
+  text-align: center;
+  position: relative;
+  height: 100%;
+  justify-content: center;
+  background-color: black;
+  background-image: url("/assets/ComingSoon_1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+
+.comingSoon {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: white; }
 .about-all {
   color: black;
   height: 100%;

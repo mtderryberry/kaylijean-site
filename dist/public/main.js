@@ -65,33 +65,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_home_home_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__app_home_home_routes_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_home_home_controller_js__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_home_home_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__app_home_home_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_home_home_scss__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_home_home_scss__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_home_home_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__app_home_home_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_about_about_routes_js__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_about_about_routes_js__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_about_about_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__app_about_about_routes_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_about_about_controller_js__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_about_about_controller_js__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_about_about_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__app_about_about_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_about_about_scss__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_about_about_scss__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_about_about_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__app_about_about_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_albums_albums_routes_js__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_albums_albums_routes_js__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_albums_albums_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__app_albums_albums_routes_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_albums_albums_controller_js__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_albums_albums_controller_js__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_albums_albums_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__app_albums_albums_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_albums_albums_service_js__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_albums_albums_service_js__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_albums_albums_service_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__app_albums_albums_service_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_albums_albums_scss__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_albums_albums_scss__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_albums_albums_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__app_albums_albums_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_contact_contact_routes_js__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_contact_contact_routes_js__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_contact_contact_routes_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__app_contact_contact_routes_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_contact_contact_controller_js__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_contact_contact_controller_js__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__app_contact_contact_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__app_contact_contact_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_contact_contact_scss__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_contact_contact_scss__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__app_contact_contact_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__app_contact_contact_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_services_s3_service_js__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_services_s3_service_js__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__app_services_s3_service_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__app_services_s3_service_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_controller_js__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_controller_js__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__app_components_navbar_navbar_controller_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_components_navbar_navbar_scss__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_components_navbar_navbar_scss__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__app_components_navbar_navbar_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18__app_components_navbar_navbar_scss__);
 
 
@@ -167,7 +167,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 23 */
 /***/ (function(module, exports) {
 
-module.exports = "<div ng-controller=\"NavbarCtrl\">\n    \n    <md-toolbar>\n        <div class=\"md-toolbar-tools\" id=\"kjNavbar\">\n            <img src = \"/assets/kayli-logo-white.png\" alt = \"Test Image\" />\n            <md-button ui-sref=\"root.home\">Home</md-button>\n            <md-button ui-sref=\"root.about\">About</md-button>\n            <md-menu md-offset=\"0 42\">\n                <md-button aria-label=\"Open Albums menu\" ng-mouseenter=\"openMenu($mdMenu, $event)\">\n                    Albums\n                    <i class=\"material-icons menu-dropdown-arrow\">arrow_drop_down</i>\n                </md-button>\n                <md-menu-content width=\"4\" class=\"album-menu-content\" ng-mouseleave=\"closeMenu($mdMenu, $event)\">\n                    <md-menu-item ng-repeat=\"title in albumTitles\">\n                        <md-button ng-click=\"openAlbum(title)\">\n                            <span ng-bind=\"title\"></span>\n                        </md-button>\n                    </md-menu-item>\n                </md-menu-content>\n            </md-menu>\n            <md-button ui-sref=\"root.contact\">Contact</md-button>\n            <span flex></span>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\" href=\"https://www.instagram.com/kayli__jean/\" target=\"_blank\">\n                <md-icon md-svg-src=\"/assets/instagram-white.svg\" class=\"header-logo\">\n            </md-button>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\" href=\"https://500px.com/kayli_jean\" target=\"_blank\">\n                <md-icon md-svg-src=\"/assets/five-hundred-pix-white.svg\" class=\"header-logo\">\n            </md-button>\n        </div>\n    </md-toolbar>\n\n</div>\n"
+module.exports = "<div ng-controller=\"NavbarCtrl\">\n    \n    <md-toolbar>\n        <div class=\"md-toolbar-tools\" id=\"kjNavbar\">\n            <img src = \"/assets/kayli-logo-white.png\" alt = \"Test Image\" />\n            <md-button ui-sref=\"root.home\">Home</md-button>\n<!--             <md-button ui-sref=\"root.about\">About</md-button>\n            <md-menu md-offset=\"0 42\">\n                <md-button aria-label=\"Open Albums menu\" ng-mouseenter=\"openMenu($mdMenu, $event)\">\n                    Albums\n                    <i class=\"material-icons menu-dropdown-arrow\">arrow_drop_down</i>\n                </md-button>\n                <md-menu-content width=\"4\" class=\"album-menu-content\" ng-mouseleave=\"closeMenu($mdMenu, $event)\">\n                    <md-menu-item ng-repeat=\"title in albumTitles\">\n                        <md-button ng-click=\"openAlbum(title)\">\n                            <span ng-bind=\"title\"></span>\n                        </md-button>\n                    </md-menu-item>\n                </md-menu-content>\n            </md-menu>\n            <md-button ui-sref=\"root.contact\">Contact</md-button> -->\n            <span flex></span>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\" href=\"https://www.instagram.com/kayli__jean/\" target=\"_blank\">\n                <md-icon md-svg-src=\"/assets/instagram-white.svg\" class=\"header-logo\">\n            </md-button>\n            <md-button class=\"md-icon-button\" aria-label=\"menu\" href=\"https://500px.com/kayli_jean\" target=\"_blank\">\n                <md-icon md-svg-src=\"/assets/five-hundred-pix-white.svg\" class=\"header-logo\">\n            </md-button>\n        </div>\n    </md-toolbar>\n\n</div>\n"
 
 /***/ }),
 /* 24 */
@@ -205,11 +205,11 @@ module.exports = "<div ng-controller=\"NavbarCtrl\">\n    \n    <md-toolbar>\n  
 /* 26 */
 /***/ (function(module, exports) {
 
-module.exports = "<div layout=\"row\" ng-controller=\"HomeCtrl\" class=\"homeRow\">\n\t<div id=\"bg\" ng-animate-swap=\"currentPicture\" class=\"swap-animation\">\n\t\t<img ng-src=\"{{currentPicture}}\" alt=\"\">\n\t</div>\n</div>"
+module.exports = "<div layout=\"row\" ng-controller=\"HomeCtrl\" class=\"homeRow\">\n\t<h1 class=\"comingSoon\">Coming Soon</h1>\n<!-- \t<div id=\"bg\" ng-animate-swap=\"currentPicture\" class=\"swap-animation\">\n\t\t<img ng-src=\"{{currentPicture}}\" alt=\"\">\n\t</div> -->\n</div>"
 
 /***/ }),
 /* 27 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 /**
  * Created by krusheth on 3/13/17.
@@ -223,50 +223,60 @@ module.exports = "<div layout=\"row\" ng-controller=\"HomeCtrl\" class=\"homeRow
 
   function HomeCtrl($scope, s3Svc, $interval) {
     let self = this;
-    $scope.s3Pictures = [];
-    $scope.currentPicture = "";
-    const bucketName = "kaylijean-homepage-photos";
 
-    const params = {
-      Bucket: bucketName
-    };
+    __webpack_require__(28);
 
-    const s3 = s3Svc.getS3();
-    const bucketUrl = "https://s3.us-west-2.amazonaws.com/" + bucketName + "/";
+    //  		$scope.s3Pictures = [];
+    //          $scope.currentPicture = "";
+    //  		const bucketName = "kaylijean-homepage-photos";
 
-    let currentImageIndex = 0;
+    //  		const params = {
+    //              Bucket: bucketName
+    //          }
 
-    s3.listObjectsV2(params, function (err, data) {
-      if (err) {
-        console.log(err, err.stack); // an error occurred
-      } else {
-        for (let i = 0; i < data.Contents.length; i++) {
-          $scope.s3Pictures.push(bucketUrl + data.Contents[i].Key);
-        }
-        $scope.currentPicture = $scope.s3Pictures[0];
-        $interval(changePicture, 8000);
-        $scope.$apply();
-      }
-    });
+    //          const s3 = s3Svc.getS3();
+    //          const bucketUrl = "https://s3.us-west-2.amazonaws.com/" + bucketName + "/";
 
-    function changePicture() {
-      currentImageIndex++;
-      if (currentImageIndex >= $scope.s3Pictures.length) {
-        currentImageIndex = 0;
-      }
-      $scope.currentPicture = $scope.s3Pictures[currentImageIndex];
-    }
+    //          let currentImageIndex = 0;
+
+    // s3.listObjectsV2(params, function(err, data) {
+    // 	if (err) {
+    // 		console.log(err, err.stack); // an error occurred
+    // 	}
+    // 	else {
+    // 		for (let i = 0; i < data.Contents.length; i++) {
+    // 			$scope.s3Pictures.push(bucketUrl + data.Contents[i].Key);
+    // 		}
+    //                  $scope.currentPicture = $scope.s3Pictures[0];
+    //                  $interval(changePicture, 8000);
+    // 		$scope.$apply();
+    // 	}
+    // });
+
+    //          function changePicture() {
+    //              currentImageIndex++;
+    //              if (currentImageIndex >= $scope.s3Pictures.length) {
+    //                  currentImageIndex = 0;
+    //              }
+    //              $scope.currentPicture = $scope.s3Pictures[currentImageIndex];
+    //          }
   }
 })();
 
 /***/ }),
 /* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/ComingSoon_1.jpg";
+
+/***/ }),
+/* 29 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -284,20 +294,20 @@ module.exports = "<div layout=\"row\" ng-controller=\"HomeCtrl\" class=\"homeRow
 
         $stateProvider.state('root.about', {
             url: '/about',
-            template: __webpack_require__(30),
+            template: __webpack_require__(31),
             resolve: {}
         });
     };
 })();
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = "<div layout=\"column\" layout-padding ng-controller=\"AboutCtrl\" class=\"about-all\">\n\t<div class=\"about-content\">\n\t\t<div class=\"about-title\">\n\t\t\t<h2 class=\"md-display\">\n\t\t\t\tAbout Kayli Jean\n\t\t\t</h2>\n\t\t</div>\n\t\t<div class=\"about-body\">\n\t\t\t<h4 class=\"md-display\">\n\t\t\t\tTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test testTest test \n\t\t\t</h4>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -311,24 +321,24 @@ module.exports = "<div layout=\"column\" layout-padding ng-controller=\"AboutCtr
   function AboutCtrl($scope) {
     let self = this;
 
-    __webpack_require__(32);
+    __webpack_require__(33);
   }
 })();
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/kaylijean.jpg";
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -365,7 +375,7 @@ module.exports = __webpack_require__.p + "assets/kaylijean.jpg";
 })();
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 /**
@@ -507,7 +517,7 @@ module.exports = __webpack_require__.p + "assets/kaylijean.jpg";
 })();
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 /**
@@ -536,13 +546,13 @@ module.exports = __webpack_require__.p + "assets/kaylijean.jpg";
 })();
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -560,20 +570,20 @@ module.exports = __webpack_require__.p + "assets/kaylijean.jpg";
 
         $stateProvider.state('root.contact', {
             url: '/contact',
-            template: __webpack_require__(39),
+            template: __webpack_require__(40),
             resolve: {}
         });
     };
 })();
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = "<div layout=\"column\" ng-controller=\"ContactCtrl\" class=\"contact-page\">\n\t<div class=\"contact-content\">\n\t\t<!-- <img src=\"/assets/kj-contact.jpg\" alt=\"\"> -->\n\t\t<div class=\"contact-title\">\n\t\t\t<h1 class=\"md-display-2\">Contact Me</h1>\n\t\t</div>\n<!-- \t\t\t<div class=\"contact-body\">\n\t\t\t<h3 class=\"md-display\">\n\t\t\t\tTo inquire about working with me or just to say hi, shoot an email over to askkaylijean@gmail.com or fill out the form below.\n\t\t\t</h3>\n\t\t</div> -->\n\t\t<div layout=\"row\">\n\t\t\t<div class=\"contact-form\" flex=\"45\" flex-offset=\"5\">\n\t\t\t\t<form name=\"contactForm\" ng-submit=\"sendEmail()\">\n\t\t\t\t\t<div layout=\"column\" flex>\n\t\t\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t\t\t<md-input-container class=\"contactInputContainer\" flex>\n\t\t\t\t\t\t\t\t<label class=\"padding-left-two\">Name</label>\n\t\t\t\t\t\t\t\t<input required=\"\" name=\"clientName\" ng-model=\"contact.clientName\" class=\"contactInput padding-left-two\">\n\t\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientName.$error\">\n\t\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</md-input-container>\n\n\t\t\t\t\t\t\t<md-input-container class=\"md-block contactInputContainer\" flex>\n\t\t\t\t\t\t\t\t<label class=\"padding-left-two\">Email</label>\n\t\t\t\t\t\t\t\t<input required=\"\" type=\"email\" name=\"clientEmail\" ng-model=\"contact.clientEmail\" minlength=\"8\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\" class=\"contactInput padding-left-two\">\n\n\t\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientEmail.$error\" role=\"alert\">\n\t\t\t\t\t\t\t\t<div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n\t\t\t\t\t\t\t\t\tYour email must be between 8 and 100 characters long and look like an e-mail address.\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</md-input-container>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<md-input-container class=\"contactInputContainer\" flex>\n\t\t\t\t\t\t\t<label class=\"padding-left-two\">Subject</label>\n\t\t\t\t\t\t\t<input required=\"\" name=\"clientSubject\" ng-model=\"contact.clientSubject\" class=\"contactInput padding-left-two\">\n\t\t\t\t\t\t\t<div ng-messages=\"contactForm.clientSubject.$error\">\n\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</md-input-container>\n\n\t\t\t\t\t\t<md-input-container class=\"md-block contact-message-textarea contactInputContainer\"flex>\n\t\t\t\t\t\t\t<label class=\"padding-left-two\">Message</label>\n\t\t\t\t\t\t\t<textarea ng-model=\"contact.message\" name=\"message\" md-maxlength=\"150\" rows=\"8\" md-select-on-focus required class=\"contactInput padding-left-two\"></textarea>\n\t\t\t\t\t\t\t<div ng-messages=\"contactForm.message.$error\">\n\t\t\t\t\t\t\t\t<div ng-message=\"required\">This is required.</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</md-input-container>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t\t<md-button type=\"submit\" class=\"contact-submit md-raised\">Submit</md-button>\n\t\t\t\t\t</div>\n\t\t\t\t</form>\n\t\t\t</div>\n\t\t\t<div flex=\"10\"></div>\n\t\t\t<div class=\"contact-info\" flex>\n\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t<div flex=\"20\">\n\t\t\t\t\t\t<i class=\"material-icons\">email</i>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"textDiv\" flex>\n\t\t\t\t\t\t<span>askkaylijean@gmail.com</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div layout=\"row\">\n\t\t\t\t\t<div flex=\"20\">\n\t\t\t\t\t\t<i class=\"material-icons\">location_on</i>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"textDiv\" flex>\n\t\t\t\t\t\t<span>Central Massachusetts</span>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -587,7 +597,7 @@ module.exports = "<div layout=\"column\" ng-controller=\"ContactCtrl\" class=\"c
 	function ContactCtrl($scope, s3Svc) {
 		let self = this;
 
-		__webpack_require__(41);
+		__webpack_require__(42);
 
 		$scope.contact = {};
 
@@ -635,19 +645,19 @@ module.exports = "<div layout=\"column\" ng-controller=\"ContactCtrl\" class=\"c
 })();
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/kj-contact.jpg";
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -687,7 +697,7 @@ module.exports = __webpack_require__.p + "assets/kj-contact.jpg";
         function init() {
             if (angular.isUndefined(AWS) && angular.isUndefined(s3)) {
                 // Import the Amazon S3 service client
-                __webpack_require__(44);
+                __webpack_require__(45);
                 AWS = window.AWS;
 
                 AWS.config.region = 'us-west-2';
@@ -709,7 +719,7 @@ module.exports = __webpack_require__.p + "assets/kj-contact.jpg";
 })();
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(setImmediate, global) {var require;var require;var __WEBPACK_AMD_DEFINE_RESULT__;// AWS SDK for JavaScript v2.169.0
@@ -139453,10 +139463,10 @@ require('../clients/browser_default');
 },{"../clients/browser_default":168,"./browser_loader":230,"./core":233}]},{},[487]);
 
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(45).setImmediate, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46).setImmediate, __webpack_require__(5)))
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -139509,13 +139519,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(46);
+__webpack_require__(47);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -139705,10 +139715,10 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(47)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(48)))
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -139898,7 +139908,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -139911,12 +139921,12 @@ process.umask = function() { return 0; };
 
   function NavbarCtrl($scope, s3Svc, $state) {
     let self = this;
-    __webpack_require__(49);
     __webpack_require__(50);
     __webpack_require__(51);
     __webpack_require__(52);
     __webpack_require__(53);
     __webpack_require__(54);
+    __webpack_require__(55);
 
     $scope.albumTitles = [];
 
@@ -139961,43 +139971,43 @@ process.umask = function() { return 0; };
 })();
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/kj-logo.svg";
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/kj-logo-black.png";
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/kayli-logo-white.png";
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/facebook-white.svg";
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/instagram-white.svg";
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/five-hundred-pix-white.svg";
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
