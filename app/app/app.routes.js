@@ -15,7 +15,7 @@
                 abstract: true,
                 views: {
                     '@': {                  //basic layout
-                        template: '<div ui-view="navbar" class="navbar-view"></div>' +
+                        template: '<div ui-view="navbar" class="navbar-view" disable-right-click></div>' +
                                     '<div ui-view="content" class="content-view"></div>'
                     },
                     'navbar@root': {        //the common navbar  for the portal

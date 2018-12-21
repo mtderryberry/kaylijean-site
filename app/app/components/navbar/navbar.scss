@@ -19,3 +19,18 @@
 	vertical-align: middle;
 	color: grey;
 }
+
+.social-media-button {
+
+	margin: 0 !important;
+	width: 35px !important;
+	height: 18px !important;
+	
+	md-icon {
+		min-width: 18px;
+		min-height: 18px;
+		width: 18px;
+		height: 24px;
+	}
+
+}

@@ -33,10 +33,10 @@
 
   background-color: black;
 
-  background-image: url("/assets/ComingSoon_1.jpg");
+/*  background-image: url("/assets/ComingSoon_1.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: contain;*/
 }
 
 .comingSoon {
@@ -45,4 +45,5 @@
   top: 50%;
   transform: translate(0, -50%);
   color: white;
+  z-index: 999;
 }

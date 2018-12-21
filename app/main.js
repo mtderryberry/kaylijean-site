@@ -17,3 +17,4 @@ import './app/contact/contact.scss';
 import './app/services/s3.service.js';
 import './app/components/navbar/navbar.controller.js';
 import './app/components/navbar/navbar.scss';
+import './app/components/disableRightClick.directive.js';
